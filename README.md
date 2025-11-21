@@ -43,13 +43,13 @@ De eigenaar van een autogarage wil bijhouden welke voertuigen bij welke eigenaar
 | V2 | De eigenaar wijzigt het kenteken van het voertuig | 60 |
 | V3 | Het kenteken bestaat uit 8 karakters met exact twee koppeltekens | 60 |
 | V4 | Het kenteken van een bedrijfswagen begint met een V | 60 |
-| V5 | De garagehouder verwijdert een voertuig | 60 |
+| V7 | De garagehouder verwijdert een voertuig | 60 |
 
 ### Technische Randvoorwaarden
 
-- **Programmeertaal:** .NET Core (versie 7.0)
+- **Programmeertaal:** .NET Core (versie 9.0)
 - **Applicatietype:** Console applicatie
-- **Database:** SQL Server
+- **Database:** SQL Server 2019
 - **Architectuur:** Minimaal 3 applicatielagen:
   - UI (User Interface)
   - Business Logic
@@ -92,37 +92,7 @@ classDiagram
 
 ### Use Case Diagram
 Het systeem ondersteunt de volgende use cases:
-
-```mermaid
-flowchart TB
-    subgraph System ["🏢 Garagesysteem"]
-        UC1(("UC1:<br/>Eigenaar toevoegen"))
-        UC2(("UC2:<br/>Lijst met eigenaren en<br/>voertuigen bekijken"))
-        UC3(("UC3:<br/>Kenteken wijzigen"))
-        UC4(("UC4:<br/>Voertuig verwijderen"))
-        UC5(("UC5:<br/>Voertuig toevoegen"))
-    end
-    
-    Actor{{"�<br/>Garagehouder"}}
-    
-    %% Actor associations
-    Actor --- UC1
-    Actor --- UC2
-    
-    %% Extend relationships
-    UC5 -.->|"≪extends≫"| UC2
-    UC3 -.->|"≪extends≫"| UC2
-    UC4 -.->|"≪extends≫"| UC2
-    
-    %% Styling
-    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px,color:#000000
-    classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px,color:#000000
-    classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px,color:#000000
-    
-    class Actor actor
-    class UC1,UC2,UC3,UC4,UC5 usecase
-    class System system
-```
+![alt text](usecase.png)
 
 **Use Cases:**
 - **UC1: Eigenaar toevoegen** - De garagehouder kan nieuwe eigenaren registreren

@@ -20,8 +20,13 @@ namespace A2D1B2C2_AutoGarageFormatief.DataAccess
         /// <summary>
         /// The generated connection string
         /// </summary>
-        /// <returns></returns>
+        /// <returns></returns>        
+        //SQL server install:
         private string ConnectionString() => $"Data Source={serverName};Initial Catalog={databaseName};Integrated Security=True";
+        // todo: pas de connection string aan indien nodig!
+        //SQL in docker using https://github.com/ZuydUniversity/KSE/tree/main/sql-server-docker
+        //private string ConnectionString() => $"Data Source={serverName};Initial Catalog={databaseName};User ID=sa;Password=DevPassword123!;Encrypt=True;Trust Server Certificate=True";
+
 
         /// <summary>
         /// default constructor
@@ -29,7 +34,7 @@ namespace A2D1B2C2_AutoGarageFormatief.DataAccess
         public DALSQL()
         {
             serverName = ".";
-            databaseName = "A2D1B2C2_AutoGarageFormatief";
+            databaseName = "AutoGarageFormatief";
         }
 
         /// <summary>

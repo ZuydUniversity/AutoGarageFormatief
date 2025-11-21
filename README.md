@@ -1,8 +1,8 @@
-# A2D1B2C2 AutoGarage Formatief - Week 1
+# AutoGarage Formatief - Week 1
 
 ## 📋 Overzicht
 
-Dit project betreft de uitwerking van een **formatieve toets**. De opdracht test de voorkennis van studenten die beginnen aan het leren OOP programmeren. Gebruik de uitwerking om je eigen werk te controleren.
+Dit project betreft de uitwerking van een **formatieve toets**. De opdracht test de voorkennis van studenten die beginnen aan het leren OOP programmeren. Maak onderstaande opdracht en gebruik de uitwerking om je eigen werk te controleren.
 
 ## 🎯 Doel van de Opdracht
 
